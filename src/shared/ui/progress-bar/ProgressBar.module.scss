@@ -1,0 +1,60 @@
+.progressBarContainer {
+  width: 100%;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+
+  progress {
+    width: 100%;
+    height: 25px;
+    color: #02BC9C;
+    background-color: #d179797b;
+    border-radius: 9px;
+    position: relative;
+  }
+
+  label {
+    position: absolute;
+    left: 1%;
+    color: #ffffff;
+    align-self: center;
+    transition: left 0.5s ease-in-out;
+  }
+
+  progress::-webkit-progress-bar {
+    background-color: #d1797936;
+    border-radius: 9px;
+    transition: width 0.5s ease-in-out;
+    &::after {
+      content: "75%";
+      color: black;
+
+    }
+  }
+
+  progress::-webkit-progress-value {
+    background-color: #bc02027b;
+    border-radius: 9px;
+    transition: width 0.5s ease-in-out;
+  }
+}
+
+.progressText {
+  padding: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+.left-0, .left-1 {
+  color: #bc02027b !important;
+}
+
+.left-100 {
+  left: calc((100%) - 48px)  !important;
+}
+
+@for $i from 5 through 99 {
+  .left-#{$i} {
+    left: calc((1% * $i) - 40px)  !important;
+  }
+}

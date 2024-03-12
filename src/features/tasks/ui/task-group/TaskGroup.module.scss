@@ -1,0 +1,36 @@
+.container {
+  padding: 16px;
+  &:not(:first-of-type) {
+    border-top: 1px solid #CCCCCC;
+  }
+  display: flex;
+  align-items: center;
+}
+
+.completed {
+  color: #bc2702;
+  font-weight: 100;
+}
+
+.groupTitle {
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: 8px;
+  }
+}
+ 
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 1.9rem;
+  max-height: 300px;
+  overflow-y: scroll;
+  padding-left: 3px;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow: hidden;
+}
